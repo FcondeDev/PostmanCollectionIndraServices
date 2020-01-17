@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "07ba5692-36a1-4006-bb86-10113c4b7ec2",
+		"name": "DUTY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/duties",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"dutyName\":\"PR-002\",\n\t\"dutyDescription\":\"Duty For testing\",\n\t\"clientIdentification\":\"111245465\",\n\t\"totalValue\":2000000,\n\t\"currentPeriodValue\":150000,\n\t\"numberOfPeriods\":6,\n\t\"currentPeriod\":3,\n\t\"status\":\"RC-001\"\n\t\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/duties",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"duties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/duties?clientIdentification=111245465",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/duties?clientIdentification=1112454652",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"duties"
+					],
+					"query": [
+						{
+							"key": "clientIdentification",
+							"value": "1112454652"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/duties/5e1e75edcf423f137910e0e5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/duties/5e1e75edcf423f137910e0e5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"duties",
+						"5e1e75edcf423f137910e0e5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/duties",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"dutyId\": \"5e1fd2e6627cbc4906423019\",\n        \"dutyName\": \"Tarjeta de Crédito VISA\",\n        \"clientIdentification\": \"111245465\",\n        \"dutyDescription\": \"Duty For a test\",\n        \"totalValue\": 2000000,\n        \"currentPeriodValue\": 150000,\n        \"numberOfPeriods\": 6,\n        \"currentPeriod\": 3,\n        \"status\": \"PENDIENTE\"\n\t\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/duties",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"duties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/duties/5e1e75edcf423f137910e0e5",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/duties/5e1e75edcf423f137910e0e5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"duties",
+						"5e1e75edcf423f137910e0e5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
